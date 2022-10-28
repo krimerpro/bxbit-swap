@@ -958,7 +958,7 @@ export const KNC_COINGECKO_ID = 'kyber-network-crystal'
 
 export const ETHER_ADDRESS = '0xEeeeeEeeeEeEeeEeEeEeeEEEeeeeEeeeeeeeEEeE'
 export const KYBER_NETWORK_DISCORD_URL = 'https://discord.com/invite/NB3vc8J9uv'
-export const KYBER_NETWORK_TWITTER_URL = 'https://twitter.com/KyberNetwork'
+export const KYBER_NETWORK_TWITTER_URL = 'https://twitter.com/BoxBitBlockchain'
 
 export const DEFAULT_GAS_LIMIT_MARGIN = 20000
 

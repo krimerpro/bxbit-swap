@@ -141,21 +141,6 @@ export default function App() {
 
   return (
     <ErrorBoundary>
-      {width && width >= 768 ? (
-        <Sidetab
-          id={feedbackId}
-          width={800} // todo revert when event end
-          // buttonText="Feedback"
-          buttonText="Feedback & Win!"
-          buttonColor={theme.primary}
-          customIcon={isDarkTheme ? 'https://i.imgur.com/iTOOKnr.png' : 'https://i.imgur.com/aPCpnGg.png'}
-        />
-      ) : (
-        <Popover
-          id={feedbackId}
-          customIcon={isDarkTheme ? 'https://i.imgur.com/iTOOKnr.png' : 'https://i.imgur.com/aPCpnGg.png'}
-        />
-      )}
       {(BLACKLIST_WALLETS.includes(isAddressString(account)) ||
         BLACKLIST_WALLETS.includes(account?.toLowerCase() || '')) && (
         <Modal

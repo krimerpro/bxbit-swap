@@ -136,30 +136,6 @@ export default function SettingsTab() {
       >
         {!isSelectingLanguage ? (
           <>
-            {isShowTutorialBtn && (
-              <RowBetween style={{ marginTop: '15px' }} id={TutorialIds.BUTTON_VIEW_GUIDE_SWAP}>
-                <RowFixed>
-                  <StyledLabel>
-                    <Trans>KyberSwap Guide</Trans>
-                  </StyledLabel>
-                </RowFixed>
-                <ButtonViewGuide onClick={openTutorialSwapGuide}>
-                  <StyledLabel style={{ color: theme.primary }}>
-                    <Trans>View</Trans>
-                  </StyledLabel>
-                </ButtonViewGuide>
-              </RowBetween>
-            )}
-
-            <RowBetween style={{ marginTop: '15px' }}>
-              <RowFixed>
-                <StyledLabel>
-                  <Trans>Dark Mode</Trans>
-                </StyledLabel>
-              </RowFixed>
-              <ThemeToggle id="toggle-dark-mode-button" isDarkMode={darkMode} toggle={toggleSetDarkMode} />
-            </RowBetween>
-
             <RowBetween style={{ marginTop: '15px' }}>
               <RowFixed>
                 <StyledLabel>

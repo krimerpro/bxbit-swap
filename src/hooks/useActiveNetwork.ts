@@ -89,7 +89,7 @@ export function useActiveNetwork() {
                 notify({
                   title: t`Failed to switch network`,
                   type: NotificationType.ERROR,
-                  summary: t`In order to use KyberSwap on ${NETWORKS_INFO[desiredChainId].name}, you must change the network in your wallet.`,
+                  summary: t`In order to use BOXBIT BLOCKCHAIN on ${NETWORKS_INFO[desiredChainId].name}, you must change the network in your wallet.`,
                 })
               }
               successCallback && successCallback()
@@ -99,7 +99,7 @@ export function useActiveNetwork() {
                 notify({
                   title: t`Failed to switch network`,
                   type: NotificationType.ERROR,
-                  summary: t`In order to use KyberSwap on ${NETWORKS_INFO[desiredChainId].name}, you must change the network in your wallet.`,
+                  summary: t`BOXBIT BLOCKCHAIN on ${NETWORKS_INFO[desiredChainId].name}, you must change the network in your wallet.`,
                 })
               }
               failureCallback && failureCallback()
@@ -111,7 +111,7 @@ export function useActiveNetwork() {
             notify({
               title: t`Failed to switch network`,
               type: NotificationType.ERROR,
-              summary: t`In order to use KyberSwap on ${NETWORKS_INFO[desiredChainId].name}, you must change the network in your wallet.`,
+              summary: t`BOXBIT BLOCKCHAIN on ${NETWORKS_INFO[desiredChainId].name}, you must change the network in your wallet.`,
             })
           }
         }

@@ -213,15 +213,6 @@ export default function Menu() {
           </MenuButton>
         )}
 
-        {bridgeLink && (
-          <ExternalNavMenuItem href={bridgeLink}>
-            <Share2 size={14} />
-            <Text width="max-content">
-              <Trans>Bridge Assets</Trans>
-            </Text>
-          </ExternalNavMenuItem>
-        )}
-
         {!above768 && (
           <NavMenuItem to={'/discover?tab=trending_soon'} onClick={toggle}>
             <DiscoverIcon size={14} />
@@ -236,12 +227,6 @@ export default function Menu() {
           </NavMenuItem>
         )}
 
-        {under369 && (
-          <NavMenuItem to="/campaigns" onClick={toggle}>
-            <Award size={14} />
-            <Trans>Campaigns</Trans>
-          </NavMenuItem>
-        )}
         {under1440 && (
           <NavDropDown
             icon={<Info size={14} />}
@@ -253,11 +238,6 @@ export default function Menu() {
             ]}
           />
         )}
-
-        <NavMenuItem to="/referral" onClick={toggle}>
-          <UserPlus size={14} />
-          <Trans>Referral</Trans>
-        </NavMenuItem>
 
         {!above1321 && (
           <NavDropDown
@@ -274,30 +254,6 @@ export default function Menu() {
             ]}
           />
         )}
-        <ExternalNavMenuItem href="https://docs.kyberswap.com">
-          <BookOpen size={14} />
-          <Trans>Docs</Trans>
-        </ExternalNavMenuItem>
-
-        <ExternalNavMenuItem href="https://request.kyberswap.com" onClick={toggle}>
-          <StyledLightIcon />
-          <Trans>Feature Request</Trans>
-        </ExternalNavMenuItem>
-
-        <ExternalNavMenuItem href="https://request.kyberswap.com/roadmap" onClick={toggle}>
-          <StyledRoadMapIcon />
-          <Trans>Roadmap</Trans>
-        </ExternalNavMenuItem>
-
-        <ExternalNavMenuItem href="https://gov.kyber.org">
-          <MessageCircle size={14} />
-          <Trans>Forum</Trans>
-        </ExternalNavMenuItem>
-
-        <ExternalNavMenuItem href="/15022022KyberSwapTermsofUse.pdf">
-          <FileText size={14} />
-          <Trans>Terms</Trans>
-        </ExternalNavMenuItem>
         {process.env.REACT_APP_MAINNET_ENV !== 'production' && (
           <NavMenuItem to="/swap-legacy" onClick={toggle}>
             <Triangle size={14} />
@@ -305,25 +261,6 @@ export default function Menu() {
           </NavMenuItem>
         )}
 
-        <ExternalNavMenuItem href="https://forms.gle/gLiNsi7iUzHws2BY8">
-          <Edit size={14} />
-          <Trans>Contact Us</Trans>
-        </ExternalNavMenuItem>
-        <ClaimRewardButton
-          disabled={!account || (!!chainId && NETWORKS_INFO[chainId].classic.claimReward === '') || pendingTx}
-          onClick={() => {
-            mixpanelHandler(MIXPANEL_TYPE.CLAIM_REWARDS_INITIATED)
-            toggleClaimPopup()
-          }}
-        >
-          {pendingTx ? (
-            <>
-              <Loader style={{ marginRight: '5px' }} stroke={theme.disableText} /> <Trans>Claiming...</Trans>
-            </>
-          ) : (
-            <Trans>Claim Rewards</Trans>
-          )}
-        </ClaimRewardButton>
         {!!process.env.REACT_APP_TAG && (
           <Text
             fontSize="10px"
@@ -336,7 +273,6 @@ export default function Menu() {
           </Text>
         )}
       </MenuFlyout>
-      <ClaimRewardModal />
       {chainId && [ChainId.BTTC, ChainId.RINKEBY].includes(chainId) && <FaucetModal />}
     </StyledMenu>
   )

@@ -140,22 +140,6 @@ const TopTrendingSoonTokensInCurrentNetwork = () => {
                   </React.Fragment>
                 ))}
               </Flex>
-              <ExternalLink
-                href={window.location.origin + '/discover?tab=trending_soon'}
-                onClickCapture={() => mixpanelHandler(MIXPANEL_TYPE.DISCOVER_SWAP_DISCOVER_MORE_CLICKED)}
-              >
-                <ButtonLight
-                  minWidth="fit-content"
-                  width="fit-content"
-                  height="100%"
-                  padding="6px 12px"
-                  borderRadius="20px"
-                  margin="0 0 0 12px"
-                  style={{ fontSize: '14px', whiteSpace: 'nowrap' }}
-                >
-                  <Trans>Discover more</Trans>
-                </ButtonLight>
-              </ExternalLink>
             </TrendingSoonTokensContainer>
             <TextNote>
               <Trans>

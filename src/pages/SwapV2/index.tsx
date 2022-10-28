@@ -12,7 +12,6 @@ import styled, { DefaultTheme, keyframes } from 'styled-components'
 import { ReactComponent as TutorialSvg } from 'assets/svg/play_circle_outline.svg'
 import { ReactComponent as RoutingIcon } from 'assets/svg/routing-icon.svg'
 import AddressInputPanel from 'components/AddressInputPanel'
-import Banner from 'components/Banner'
 import { ButtonConfirmed, ButtonError, ButtonLight, ButtonPrimary } from 'components/Button'
 import { GreyCard } from 'components/Card/index'
 import Column from 'components/Column/index'
@@ -739,9 +738,54 @@ export default function Swap({ history }: RouteComponentProps) {
         onDismiss={handleDismissTokenWarning}
       />
       <PageWrapper>
-        <Banner />
         {chainId !== ChainId.ETHW && <TopTrendingSoonTokensInCurrentNetwork />}
         <Container>
+          {(isShowLiveChart || isShowTradeRoutes || shouldRenderTokenInfo) && (
+            <InfoComponentsWrapper>
+              {isShowLiveChart && (
+                <LiveChartWrapper>
+                  <Suspense
+                    fallback={
+                      <Skeleton
+                        height="100%"
+                        baseColor={theme.background}
+                        highlightColor={theme.buttonGray}
+                        borderRadius="1rem"
+                      />
+                    }
+                  >
+                    <LiveChart onRotateClick={handleRotateClick} currencies={currencies} />
+                  </Suspense>
+                </LiveChartWrapper>
+              )}
+              {isShowTradeRoutes && (
+                <RoutesWrapper isOpenChart={isShowLiveChart}>
+                  <Flex flexDirection="column" width="100%">
+                    <Flex alignItems={'center'}>
+                      <RoutingIconWrapper />
+                      <Text fontSize={20} fontWeight={500} color={theme.subText}>
+                        <Trans>Your trade route</Trans>
+                      </Text>
+                    </Flex>
+                    <Suspense
+                      fallback={
+                        <Skeleton
+                          height="100px"
+                          baseColor={theme.background}
+                          highlightColor={theme.buttonGray}
+                          borderRadius="1rem"
+                        />
+                      }
+                    >
+                      <Routing trade={trade} currencies={currencies} formattedAmounts={formattedAmounts} />
+                    </Suspense>
+                  </Flex>
+                </RoutesWrapper>
+              )}
+              {shouldRenderTokenInfo ? <TokenInfoV2 currencyIn={currencyIn} currencyOut={currencyOut} /> : null}
+            </InfoComponentsWrapper>
+          )}
+
           <SwapFormWrapper isShowTutorial={isShowTutorial}>
             <RowBetween mb={'16px'}>
               <TabContainer>
@@ -753,14 +797,6 @@ export default function Swap({ history }: RouteComponentProps) {
               </TabContainer>
 
               <SwapFormActions>
-                <Tutorial
-                  type={TutorialType.SWAP}
-                  customIcon={
-                    <StyledActionButtonSwapForm>
-                      <TutorialIcon />
-                    </StyledActionButtonSwapForm>
-                  }
-                />
                 {chainId !== ChainId.ETHW && (
                   <MobileTokenInfo
                     currencies={currencies}
@@ -1113,52 +1149,6 @@ export default function Swap({ history }: RouteComponentProps) {
             </AppBodyWrapped>
             <AdvancedSwapDetailsDropdown trade={trade} feeConfig={feeConfig} />
           </SwapFormWrapper>
-
-          {(isShowLiveChart || isShowTradeRoutes || shouldRenderTokenInfo) && (
-            <InfoComponentsWrapper>
-              {isShowLiveChart && (
-                <LiveChartWrapper>
-                  <Suspense
-                    fallback={
-                      <Skeleton
-                        height="100%"
-                        baseColor={theme.background}
-                        highlightColor={theme.buttonGray}
-                        borderRadius="1rem"
-                      />
-                    }
-                  >
-                    <LiveChart onRotateClick={handleRotateClick} currencies={currencies} />
-                  </Suspense>
-                </LiveChartWrapper>
-              )}
-              {isShowTradeRoutes && (
-                <RoutesWrapper isOpenChart={isShowLiveChart}>
-                  <Flex flexDirection="column" width="100%">
-                    <Flex alignItems={'center'}>
-                      <RoutingIconWrapper />
-                      <Text fontSize={20} fontWeight={500} color={theme.subText}>
-                        <Trans>Your trade route</Trans>
-                      </Text>
-                    </Flex>
-                    <Suspense
-                      fallback={
-                        <Skeleton
-                          height="100px"
-                          baseColor={theme.background}
-                          highlightColor={theme.buttonGray}
-                          borderRadius="1rem"
-                        />
-                      }
-                    >
-                      <Routing trade={trade} currencies={currencies} formattedAmounts={formattedAmounts} />
-                    </Suspense>
-                  </Flex>
-                </RoutesWrapper>
-              )}
-              {shouldRenderTokenInfo ? <TokenInfoV2 currencyIn={currencyIn} currencyOut={currencyOut} /> : null}
-            </InfoComponentsWrapper>
-          )}
         </Container>
         <Flex justifyContent="center">
           <SwitchLocaleLinkWrapper>

@@ -85,17 +85,11 @@ export const FooterSocialLink = () => {
   const theme = useTheme()
   return (
     <Flex alignItems="center" justifyContent="center" sx={{ gap: '24px' }}>
-      <ExternalLinkNoLineHeight href="https://t.me/kybernetwork">
+      <ExternalLinkNoLineHeight href="https://t.me/boxbitblockchain">
         <Telegram size={16} color={theme.subText} />
       </ExternalLinkNoLineHeight>
       <ExternalLinkNoLineHeight href={KYBER_NETWORK_TWITTER_URL}>
         <TwitterIcon color={theme.subText} />
-      </ExternalLinkNoLineHeight>
-      <ExternalLinkNoLineHeight href={KYBER_NETWORK_DISCORD_URL}>
-        <Discord width={16} height={12} color={theme.subText} />
-      </ExternalLinkNoLineHeight>
-      <ExternalLinkNoLineHeight href={`https://blog.kyber.network`}>
-        <Medium />
       </ExternalLinkNoLineHeight>
     </Flex>
   )
@@ -111,32 +105,10 @@ function Footer() {
         <InfoWrapper>
           <Item>
             <Text marginRight="6px">
-              <Trans>Powered By</Trans>
+              <Trans>Powered By BOXBIT BLOCKCHAIN</Trans>
             </Text>
-            <ExternalLink href="https://kyber.network" style={{ display: 'flex' }}>
-              {isDarkMode ? <PoweredByIconDark width={48} /> : <PoweredByIconLight width={48} />}
-            </ExternalLink>
           </Item>
           <Separator />
-
-          <Item>
-            <Text marginRight="6px" display="flex">
-              <Trans>Audited By</Trans>
-              {!above768 && <InfoHelper size={14} text={t`Covers smart-contracts`} placement="top" />}
-            </Text>
-            <ExternalLink href="https://chainsecurity.com/security-audit/kyberswap-elastic" style={{ display: 'flex' }}>
-              <img
-                src={
-                  !isDarkMode
-                    ? 'https://chainsecurity.com/wp-content/themes/chainsecurity-wp/resources/images/temp/logo.svg'
-                    : require('../../assets/svg/chainsecurity.svg').default
-                }
-                alt=""
-                width="98px"
-              />
-            </ExternalLink>
-            {above768 && <InfoHelper size={14} text={t`Covers smart-contracts`} placement="top" />}
-          </Item>
         </InfoWrapper>
         <FooterSocialLink />
       </FooterContent>

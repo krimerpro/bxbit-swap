@@ -312,8 +312,8 @@ export const SwapFormWrapper = styled.div<{ isShowTutorial?: boolean }>`
   @media only screen and (min-width: 1100px) {
     position: ${({ isShowTutorial }) => (isShowTutorial ? 'unset' : 'sticky')};
     /**
-      When tutorial appear, there is no need sticky form. 
-      Besides, it is also easy for us control position of tutorial popup when scroll page. 
+      When tutorial appear, there is no need sticky form.
+      Besides, it is also easy for us control position of tutorial popup when scroll page.
     */
     top: 16px;
   }
