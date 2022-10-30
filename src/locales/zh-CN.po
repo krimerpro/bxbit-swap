@@ -2797,8 +2797,8 @@ msgstr "池| 放大系数"
 #~ msgstr "驱动"
 
 #: src/components/Footer/Footer.tsx
-#~ msgid "Powered By BOXBIT BLOCKCHAIN"
-#~ msgstr ""
+msgid "Powered By BOXBIT BLOCKCHAIN"
+msgstr ""
 
 #: src/components/swapv2/TokenInfo.tsx
 #: src/pages/About/AboutKyberSwap.tsx
