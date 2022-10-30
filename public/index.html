@@ -190,29 +190,29 @@
           function getInitialColorMode() {
             const useDarkMode = doesUseDarkMode()
             if (typeof useDarkMode === 'boolean') {
-              return useDarkMode ? 'dark' : 'light'
+              return useDarkMode ? 'light' : 'light'
             }
 
             if (usePrefersColorScheme === false) {
               // default to 'dark'.
-              return 'dark'
+              return 'light'
             }
 
             // If there is no saved preference, use a media query
-            const mediaQuery = '(prefers-color-scheme: dark)'
+            const mediaQuery = '(prefers-color-scheme: light)'
             const mql = window.matchMedia(mediaQuery)
             const hasImplicitPreference = typeof mql.matches === 'boolean'
             if (hasImplicitPreference) {
-              return mql.matches ? 'dark' : 'light'
+              return mql.matches ? 'light' : 'light'
             }
 
             // default to 'dark'.
-            return 'dark'
+            return 'light'
           }
           const colorMode = getInitialColorMode()
           // add HTML attribute if dark mode
-          if (colorMode === 'dark') {
-            document.documentElement.setAttribute('data-theme', 'dark')
+          if (colorMode === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light')
           }
         }
         setInitialColorMode(false)

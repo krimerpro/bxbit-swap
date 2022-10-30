@@ -52,12 +52,12 @@ export function colors(darkMode: boolean): Colors {
 
     // backgrounds
     background: darkMode ? '#1C1C1C' : '#ffffff',
-    background2: darkMode ? '#add8e6' : '#add8e6',
+    background2: darkMode ? '#1C1C1C' : '#add8e6',
     tabActive: darkMode ? '#313131' : '#ffffff',
     tabBackgound: darkMode ? '#0F0F0F' : '#E2E2E2',
 
     tableHeader: darkMode ? '#313131' : '#FBFBFB',
-    buttonBlack: darkMode ? '#add8e6' : '#add8e6',
+    buttonBlack: darkMode ? '#0F0F0F' : '#add8e6',
     buttonGray: darkMode ? '#292929' : '#E2E2E2',
 
     text2: darkMode ? '#C3C5CB' : '#565A69',
@@ -82,16 +82,16 @@ export function colors(darkMode: boolean): Colors {
     bg7: darkMode ? '#31CB9E' : '#98e5ce',
     bg8: darkMode ? '#1d7a5f' : '#31CB9E',
     bg9: darkMode ? '#1d2a32' : '#ecebeb',
-    bg10: darkMode ? '#add8e6' : '#add8e6',
+    bg10: darkMode ? '#263239' : '#add8e6',
     bg11: darkMode ? '#1b2226' : '#ebeaea',
     bg13: darkMode ? '#1f292e' : '#e8e9ed',
     bg14: darkMode ? '#40505a' : '#a9a9a9',
-    bg15: darkMode ? '#add8e6' : '#add8e6',
+    bg15: darkMode ? '#1f292e' : '#add8e6',
     bg16: darkMode ? '#1f292e' : '#ffffff',
     bg17: darkMode ? '#31cb9e33' : '#31cb9e1a',
     bg18: darkMode ? '#1a4052' : '#ecebeb',
     bg19: darkMode ? '#222c31' : '#ffffff',
-    bg20: darkMode ? '#add8e6' : '#add8e6',
+    bg20: darkMode ? '#243036' : '#add8e6',
     bg21: darkMode
       ? 'linear-gradient(90deg, rgba(29, 122, 95, 0.5) 0%, rgba(29, 122, 95, 0) 100%)'
       : 'linear-gradient(90deg, rgba(49, 203, 158, 0.15) 0%, rgba(49, 203, 158, 0) 100%)', // success
