@@ -1,4 +1,4 @@
-// import { Trans, t } from '@lingui/macro'
+import { Trans, t } from '@lingui/macro'
 import React from 'react'
 import { useMedia } from 'react-use'
 import { Flex, Text } from 'rebass'
@@ -105,7 +105,7 @@ function Footer() {
         <InfoWrapper>
           <Item>
             <Text marginRight="6px">
-              Powered By BOXBIT BLOCKCHAIN
+              <Trans>Powered By BOXBIT BLOCKCHAIN</Trans>
             </Text>
           </Item>
           <Separator />
