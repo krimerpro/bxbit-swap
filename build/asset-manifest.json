@@ -13,7 +13,7 @@
     "elastic-remove-liquidity-page.js": "/static/js/elastic-remove-liquidity-page.35d7c9ec.chunk.js",
     "ethers.js": "/static/js/ethers.616b0ee0.chunk.js",
     "main.css": "/static/css/main.157ccc24.chunk.css",
-    "main.js": "/static/js/main.5b888c0c.chunk.js",
+    "main.js": "/static/js/main.460f6faa.chunk.js",
     "my-pool-page.js": "/static/js/my-pool-page.aae02b26.chunk.js",
     "pool-finder-page.js": "/static/js/pool-finder-page.3927cdf0.chunk.js",
     "pools-page.js": "/static/js/pools-page.3d70ba3a.chunk.js",
@@ -80,9 +80,9 @@
     "static/js/create-referral-page.16126a03.chunk.js.gz": "/static/js/create-referral-page.16126a03.chunk.js.gz",
     "static/js/elastic-remove-liquidity-page.35d7c9ec.chunk.js.gz": "/static/js/elastic-remove-liquidity-page.35d7c9ec.chunk.js.gz",
     "static/js/ethers.616b0ee0.chunk.js.gz": "/static/js/ethers.616b0ee0.chunk.js.gz",
-    "static/js/main.5b888c0c.chunk.js.LICENSE.txt": "/static/js/main.5b888c0c.chunk.js.LICENSE.txt",
-    "static/js/main.5b888c0c.chunk.js.LICENSE.txt.gz": "/static/js/main.5b888c0c.chunk.js.LICENSE.txt.gz",
-    "static/js/main.5b888c0c.chunk.js.gz": "/static/js/main.5b888c0c.chunk.js.gz",
+    "static/js/main.460f6faa.chunk.js.LICENSE.txt": "/static/js/main.460f6faa.chunk.js.LICENSE.txt",
+    "static/js/main.460f6faa.chunk.js.LICENSE.txt.gz": "/static/js/main.460f6faa.chunk.js.LICENSE.txt.gz",
+    "static/js/main.460f6faa.chunk.js.gz": "/static/js/main.460f6faa.chunk.js.gz",
     "static/js/my-pool-page.aae02b26.chunk.js.gz": "/static/js/my-pool-page.aae02b26.chunk.js.gz",
     "static/js/pool-finder-page.3927cdf0.chunk.js.gz": "/static/js/pool-finder-page.3927cdf0.chunk.js.gz",
     "static/js/pools-page.3d70ba3a.chunk.js.gz": "/static/js/pools-page.3d70ba3a.chunk.js.gz",
@@ -379,6 +379,6 @@
     "static/js/runtime-main.d81320ca.js",
     "static/js/ethers.616b0ee0.chunk.js",
     "static/css/main.157ccc24.chunk.css",
-    "static/js/main.5b888c0c.chunk.js"
+    "static/js/main.460f6faa.chunk.js"
   ]
 }
