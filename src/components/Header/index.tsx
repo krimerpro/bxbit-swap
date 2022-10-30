@@ -353,7 +353,7 @@ export default function Header() {
   return (
     <HeaderFrame>
       <HeaderRow>
-        <Title to="/swap">
+        <Title to="\boxbitblockchain.com" target="_blank">
           <UniIcon>
             <IconImage src={isDark ? '/logo-dark.svg' : '/logo.svg'} alt="logo" />
           </UniIcon>
