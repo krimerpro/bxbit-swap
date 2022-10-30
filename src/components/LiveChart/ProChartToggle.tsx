@@ -64,7 +64,7 @@ export interface ProChartToggleProps {
 
 export default function ProChartToggle({
   id,
-  activeName = 'pro',
+  activeName = 'basic',
   buttons = [
     { name: 'basic', title: 'Basic' },
     { name: 'pro', title: 'Pro' },

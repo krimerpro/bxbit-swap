@@ -183,7 +183,7 @@ function LiveChart({
       timeout = setTimeout(() => {
         // Switch to Basic chart after loading over 5 seconds
         toggleProLiveChart()
-      }, 5000)
+      }, 5)
     }
     return () => {
       if (timeout) {
