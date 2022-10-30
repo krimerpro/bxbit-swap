@@ -74,7 +74,7 @@ export function useIsDarkMode(): boolean {
   const userDarkMode = useSelector<AppState, boolean | null>(state => state.user.userDarkMode)
   const matchesDarkMode = useSelector<AppState, boolean>(state => state.user.matchesDarkMode)
 
-  return typeof userDarkMode !== 'boolean' ? matchesDarkMode : false
+  return typeof userDarkMode !== 'boolean' ? false : false
 }
 
 export function useDarkModeManager(): [boolean, () => void] {
