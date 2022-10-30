@@ -3972,7 +3972,7 @@ msgstr ""
 
 #: src/components/swapv2/PairSuggestion/ListPair.tsx
 #: src/components/swapv2/PairSuggestion/SearchInput.tsx
-msgid "Try typing \"10 ETH to KNC\""
+msgid "Try typing \"1 BNB to BOXBIT\""
 msgstr ""
 
 #: src/pages/SwapV2/index.tsx
