@@ -758,30 +758,6 @@ export default function Swap({ history }: RouteComponentProps) {
                   </Suspense>
                 </LiveChartWrapper>
               )}
-              {isShowTradeRoutes && (
-                <RoutesWrapper isOpenChart={isShowLiveChart}>
-                  <Flex flexDirection="column" width="100%">
-                    <Flex alignItems={'center'}>
-                      <RoutingIconWrapper />
-                      <Text fontSize={20} fontWeight={500} color={theme.subText}>
-                        <Trans>Your trade route</Trans>
-                      </Text>
-                    </Flex>
-                    <Suspense
-                      fallback={
-                        <Skeleton
-                          height="100px"
-                          baseColor={theme.background}
-                          highlightColor={theme.buttonGray}
-                          borderRadius="1rem"
-                        />
-                      }
-                    >
-                      <Routing trade={trade} currencies={currencies} formattedAmounts={formattedAmounts} />
-                    </Suspense>
-                  </Flex>
-                </RoutesWrapper>
-              )}
               {shouldRenderTokenInfo ? <TokenInfoV2 currencyIn={currencyIn} currencyOut={currencyOut} /> : null}
             </InfoComponentsWrapper>
           )}

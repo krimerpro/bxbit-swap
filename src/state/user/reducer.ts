@@ -89,9 +89,9 @@ export const getFavoriteTokenDefault = (chainId: ChainId) => ({
 })
 
 export const defaultShowLiveCharts: { [chainId in ChainId]: boolean } = {
+  [ChainId.BSCMAINNET]: true,
   [ChainId.MAINNET]: true,
   [ChainId.MATIC]: true,
-  [ChainId.BSCMAINNET]: true,
   [ChainId.CRONOS]: true,
   [ChainId.AVAXMAINNET]: true,
   [ChainId.FANTOM]: true,

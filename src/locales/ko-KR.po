@@ -4576,8 +4576,8 @@ msgid "Your trade is routed through one or more of these liquidity sources"
 msgstr ""
 
 #: src/pages/SwapV2/index.tsx
-msgid "Your trade route"
-msgstr "거래 경로"
+#~ msgid "Your trade route"
+#~ msgstr "거래 경로"
 
 #: src/components/swapv2/SwapSettingsPanel/SlippageSetting.tsx
 #: src/components/TransactionSettings/index.tsx
